@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:orientation="vertical"
+	>
+	
+	<android.support.v7.widget.CardView
+		android:id="@+id/car"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		app:cardCornerRadius="5dp"
+		app:cardElevation="2dp"
+		app:cardMaxElevation="5dp"
+		app:cardPreventCornerOverlap="true"
+		app:cardUseCompatPadding="true"
+		>
+		
+		<LinearLayout
+			android:layout_width="300dp"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:orientation="vertical"
+			>
+			
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:orientation="horizontal"
+				android:padding="@dimen/dp10"
+				>
+				<!--app:civ_border_color="#a1ae72"-->
+				<!--app:civ_border_width="2dp"-->
+				<km.view.RoundImageView
+					android:id="@+id/iv_head"
+					android:layout_width="60dp"
+					android:layout_height="60dp"
+					android:layout_margin="10dp"
+					android:src="@mipmap/dft_avatar"
+					/>
+				
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					>
+					
+					<TextView
+						android:id="@+id/tv_name"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="暂无名称"
+						android:textColor="@color/textColorPrimary"
+						android:textSize="@dimen/dp16"
+						/>
+					
+					<TextView
+						android:id="@+id/tv_position"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="4dp"
+						android:text="实习会员"
+						android:textColor="#959595"
+						android:textSize="13sp"
+						/>
+					
+					<TextView
+						android:id="@+id/tv_phone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="4dp"
+						android:drawablePadding="@dimen/dp2"
+						android:drawableLeft="@mipmap/f4_card_phone_s"
+						android:gravity="center|left"
+						android:text="暂无号码"
+						android:textColor="#959595"
+						android:textSize="13sp"
+						/>
+				</LinearLayout>
+			</LinearLayout>
+			
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dp1"
+				android:background="@color/grayColor_line"
+				/>
+			
+			<ImageView
+				android:id="@+id/iv_code"
+				android:layout_width="@dimen/dp130"
+				android:layout_height="@dimen/dp130"
+				android:layout_margin="@dimen/dp20"
+				android:scaleType="fitXY"
+				/>
+			
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="20dp"
+				android:layout_marginTop="10dp"
+				android:gravity="center"
+				android:text="[扫一扫 识别图中二维码]"
+				android:textColor="@color/grayColor_main"
+				android:textStyle="bold"
+				/>
+		</LinearLayout>
+	</android.support.v7.widget.CardView>
+</LinearLayout>

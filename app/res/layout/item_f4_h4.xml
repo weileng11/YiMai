@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/cardview_light_background"
+	>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp15"
+		android:background="@color/grayColor_line"
+		/>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/dp15"
+		android:orientation="horizontal"
+		>
+		<CheckedTextView
+			android:id="@+id/f4_shop_new"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/select_shop_name"
+			android:text="最新产品"
+			android:checked="true"
+			/>
+		
+		<CheckedTextView
+			android:id="@+id/f4_shop_all"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp40"
+			android:textColor="@color/select_shop_name"
+			android:text="名片产品"
+			/>
+		
+	</LinearLayout>
+	
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp1"
+		android:background="@color/grayColor_line"
+		/>
+	
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		>
+		
+		<ImageView
+			android:id="@+id/h4_shop_all"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop"
+			android:src="@mipmap/f4_shop_bg"
+			android:visibility="gone"
+			tools:visibility="visible"
+			/>
+		
+		<km.view.KmRecyclerView
+			android:id="@+id/f4_h4_shop_new"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/colorBackgroundFloating"
+			app:layoutManager="@string/GridLayoutManager"
+			app:spanCount="3"
+			tools:listitem="@layout/item_goods_type"
+			/>
+		
+	</FrameLayout>
+</LinearLayout>

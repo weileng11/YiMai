@@ -1,0 +1,35 @@
+/*
+apply from: 'build_zip.gradle'
+*/
+
+task zip(type: Zip){
+	String zipDir=rootDir.parent
+	String zipName=rootDir.name
+	String zipExt="zip"
+	
+	doFirst{
+		File zip=new File(zipDir, zipName+"."+zipExt)
+		File zip2=null
+		if(zip.exists()){
+			zip2=zip
+			for(int i=1; zip2.exists(); i++) zip2=new File(zipDir, zipName+i+"."+zipExt)
+			zip.renameTo(zip2)
+		}
+		println("The old one: \n"+String.valueOf(zip2))
+		println("The new one: \n"+zip.path)
+	}
+	
+	from rootDir.path
+	into zipName
+	destinationDir file(zipDir)
+	baseName zipName
+	appendix ''
+	version ''
+	classifier ''
+	extension zipExt
+	exclude { e ->
+		File f=e.file
+		f.isDirectory() && (f.name=="build" || f.name==".gradle" || f.name==".git")
+	}
+}
+

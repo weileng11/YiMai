@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:orientation="horizontal"
+	android:background="@color/colorBackgroundFloating"
+	android:padding="@dimen/dp10"
+	android:gravity="center|left"
+	>
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="同城\n头条"
+		android:textColor="@color/colorAccent"
+		android:textSize="@dimen/dp14"
+		android:typeface="monospace"
+		/>
+	
+	<TextView
+		android:layout_width="@dimen/dp1"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="@dimen/dp10"
+		android:background="@color/colorBackground"
+		/>
+	
+	<TextView
+		android:id="@+id/f2_h4_news"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/dp10"
+		android:gravity="center|left"
+		android:ellipsize="end"
+		android:lines="2"
+		android:hint="暂无数据"
+		android:textColor="@color/textColorPrimary"
+		android:foreground="?attr/selectableItemBackground"
+		/>
+</LinearLayout>

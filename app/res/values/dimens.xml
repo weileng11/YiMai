@@ -1,0 +1,5 @@
+<resources>
+	<dimen name="banner_height">@dimen/dp200</dimen>
+	<dimen name="card_corner">@dimen/dp6</dimen>
+	<dimen name="card_elevation">@dimen/dp2</dimen>
+</resources>

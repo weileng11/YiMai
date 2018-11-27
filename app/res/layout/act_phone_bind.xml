@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	<include layout="@layout/toolbar" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="@dimen/dp_10"
+		>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center|left"
+			>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="手机号："
+				/>
+			<EditText
+				android:id="@+id/phone_bind_num"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="设置手机号"
+				/>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center|left"
+			>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="新密码："
+				/>
+			<EditText
+				android:id="@+id/phone_bind_pwd"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="设置新密码"
+				/>
+		</LinearLayout>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center|left"
+			>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="验证码："
+				/>
+			
+			<EditText
+				android:id="@+id/phone_bind_code"
+				android:layout_weight="1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="短信验证码"
+				/>
+			
+			<Button
+				android:id="@+id/phone_bind_get_code"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="获取"
+				/>
+		</LinearLayout>
+		
+		<Button
+			android:id="@+id/phone_bind_start"
+			style="@style/Button.Colored"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="提交"
+			/>
+	
+	</LinearLayout>
+</LinearLayout>

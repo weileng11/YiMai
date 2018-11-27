@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<km.view.KmRefreshLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/f4_refresh"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	
+	<km.view.KmRefreshHeader
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+		
+		<include layout="@layout/f4_nodate" />
+		
+		<km.view.KmRecyclerView
+			android:id="@+id/f4_list"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layoutManager="@string/LinearLayoutManager"
+			tools:listitem="@layout/item_f4_h1"
+			/>
+	</FrameLayout>
+</km.view.KmRefreshLayout>

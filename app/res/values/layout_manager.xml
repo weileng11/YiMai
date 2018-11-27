@@ -1,0 +1,4 @@
+<resources>
+	<string name="LinearLayoutManager">LinearLayoutManager</string>
+	<string name="GridLayoutManager">GridLayoutManager</string>
+</resources>

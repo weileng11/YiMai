@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/cardview_light_background"
+	android:focusable="false"
+	android:focusableInTouchMode="false"
+	>
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/dp15"
+		android:text="工作经历"
+		/>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp1"
+		android:background="@color/grayColor_line"
+		/>
+	
+	<km.view.KmRecyclerView
+		android:id="@+id/rv_mp_jl"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:focusable="false"
+		android:focusableInTouchMode="false"
+		app:layoutManager="@string/LinearLayoutManager"
+		/>
+	
+	<Button
+		android:id="@+id/btn_add_jl"
+		android:layout_width="@dimen/dp102"
+		android:layout_height="@dimen/dp27"
+		android:layout_gravity="center|center_vertical"
+		android:layout_marginTop="@dimen/dp15"
+		android:background="@drawable/round_button_bg"
+		android:text="+添加工作经历"
+		android:textColor="@color/color_cs"
+		android:textSize="@dimen/sp12"
+		/>
+</LinearLayout>

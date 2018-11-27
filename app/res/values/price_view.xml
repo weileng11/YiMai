@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="PriceView">
+		<attr name="pvShowNow" format="boolean" />
+		<attr name="pvShowOld" format="boolean" />
+		<attr name="pvNowPrice" format="float" />
+		<attr name="pvOldPrice" format="float" />
+		<attr name="pvNowCurrency" format="string|reference" />
+		<attr name="pvOldCurrency" format="string|reference" />
+		<attr name="pvNowTextSize" format="dimension|reference" />
+		<attr name="pvOldTextSize" format="dimension|reference" />
+		<attr name="pvNowTextColor" format="color|reference" />
+		<attr name="pvOldTextColor" format="color|reference" />
+		<attr name="pvNowDecimal" format="integer" />
+		<attr name="pvOldDecimal" format="integer" />
+		<attr name="pvNowForceDecimal" format="boolean" />
+		<attr name="pvOldForceDecimal" format="boolean" />
+		<attr name="pvNowOldSpace" format="dimension|reference" />
+	</declare-styleable>
+</resources>

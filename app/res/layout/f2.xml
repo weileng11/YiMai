@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<km.view.KmRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/f2_refresh"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	
+	<km.view.KmRefreshHeader
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+		
+		<km.view.KmRecyclerView
+			android:id="@+id/f2_list"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layoutManager="@string/LinearLayoutManager"
+			tools:listitem="@layout/item_f2_h1"
+			tools:layout_weight="1"
+			/>
+		
+		<km.view.GifImageView
+			android:id="@+id/f2_float"
+			android:layout_width="@dimen/dp60"
+			android:layout_height="@dimen/dp60"
+			android:layout_marginRight="@dimen/dp10"
+			android:layout_marginBottom="@dimen/dp100"
+			android:layout_gravity="bottom|right"
+			android:src="@mipmap/f2_float_post"
+			android:foreground="?attr/selectableItemBackground"
+			/>
+	</FrameLayout>
+	
+	<km.view.KmRefreshFooter
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+</km.view.KmRefreshLayout>

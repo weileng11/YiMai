@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="price_now">#e10130</color>
+	<color name="price_old">#777</color>
+	
+	<color name="grayColor_line">#eeeeee</color>
+	<color name="grayColor_hint">#A6A6A6</color>
+	<color name="grayColor_main">#262626</color>
+	<color name="grayColor_main1">#808080</color>
+	
+	<color name="colorYellow">#FFFF00</color>
+	<color name="colorWhite">#FFFFFF</color>
+	<color name="color_cs">#ef7113</color>
+	<color name="color_grayness">#494949</color>
+	<color name="color_gray_se">#cec0a0</color>
+	<color name="color_bus_hui">#786b48</color>
+	<color name="color_info_tv">#262626</color>
+	<color name="color_pub_tv">#666666</color>
+	<color name="color_pub_tv1">#999999</color>
+</resources>

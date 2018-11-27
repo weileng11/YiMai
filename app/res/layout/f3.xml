@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<km.view.KmRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/f3_refresh"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	
+	<km.view.KmRefreshHeader
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingTop="@dimen/statusBarSize"
+		android:background="@color/colorBackgroundFloating"
+		>
+		
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/actionBarSize"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:text="名片广场"
+			android:textSize="@dimen/sp18"
+			android:textColor="@color/textColorPrimary"
+			/>
+		
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp1"
+			android:background="@color/colorBackground"
+			/>
+		
+		<android.support.design.widget.TabLayout
+			android:id="@+id/f3_tabs"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:tabMode="fixed"
+			app:tabSelectedTextColor="@color/colorAccent"
+			>
+			
+			<android.support.design.widget.TabItem
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="热门名片"
+				/>
+			
+			<android.support.design.widget.TabItem
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="附近名片"
+				/>
+			
+			<android.support.design.widget.TabItem
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="行业分类"
+				android:layout="@layout/f3_tab_category"
+				/>
+		
+		</android.support.design.widget.TabLayout>
+		
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp1"
+			android:background="@color/colorBackground"
+			/>
+		
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			>
+			
+			<km.view.KmRecyclerView
+				android:id="@+id/f3_list"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/colorBackground"
+				app:layoutManager="@string/LinearLayoutManager"
+				tools:listitem="@layout/item_f3_card"
+				/>
+			
+			<include layout="@layout/f3_category" />
+			
+		</FrameLayout>
+		
+	</LinearLayout>
+	
+	<km.view.KmRefreshFooter
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+</km.view.KmRefreshLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/maskLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dialogLayout" android:clickable="true" android:layout_width="fill_parent" android:layout_height="250.0dip" android:layout_alignParentBottom="true">
+        <View android:id="@id/leftBorder" android:background="#ffff0000" android:visibility="gone" android:layout_width="2.0dip" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+        <View android:id="@id/rightBorder" android:background="#ffff0000" android:visibility="gone" android:layout_width="2.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+        <View android:id="@id/topBorder" android:background="#ff0000ff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        <TextView android:id="@id/msgText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip" android:layout_toRightOf="@id/leftBorder" />
+        <Button android:id="@id/okBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="确定" android:layout_alignParentBottom="true" />
+        <View android:id="@id/bottomBorder" android:background="#ff0000ff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

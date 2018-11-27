@@ -1,0 +1,48 @@
+{
+	"modules": [
+		{
+			"name": "clipBoard",
+			"class": "com.uzmap.pkg.uzmodules.uzclipboard.UzClipBoard"
+		},
+		{
+			"name": "dialogBox",
+			"class": "com.apicloud.dialogBox.DialogBox"
+		},
+		{
+			"name": "mam",
+			"class": "com.uzmap.pkg.uzmodules.uzmam.UzMAM"
+		},
+		{
+			"name": "model",
+			"class": "com.uzmap.pkg.uzmodules.uzmcm.UzMCM"
+		},
+		{
+			"name": "query",
+			"class": "com.uzmap.pkg.uzmodules.uzmcm.UzMCMQuery"
+		},
+		{
+			"name": "user",
+			"class": "com.uzmap.pkg.uzmodules.uzmcm.UzMCMUser"
+		},
+		{
+			"name": "relation",
+			"class": "com.uzmap.pkg.uzmodules.uzmcm.UzMCMRelation"
+		},
+		{
+			"name": "shareAction",
+			"class": "com.uzmap.pkg.uzmodules.sharedModule.SharedModule"
+		},
+		{
+			"name": "videoPlayer",
+			"class": "com.uzmap.pkg.uzmodules.uzVideoPlayer.UzVideoPlayer"
+		},
+		{
+			"name": "webBrowser",
+			"class": "com.uzmap.pkg.uzmodules.browser.BrowserModule"
+		},
+		{
+			"name": "egPreLoad",
+			"class": "com.uzmap.pkg.uzmodules.browser.ModulePreLoad"
+		}
+	]
+}

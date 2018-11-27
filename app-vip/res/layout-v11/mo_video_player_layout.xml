@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <VideoView android:id="@id/video_player_videoView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/video_player_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+    <ProgressBar android:id="@id/video_player_progress" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/video_player_head" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/video_player_back" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/mo_video_player_back" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/video_player_title" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginLeft="10.0dip" android:text="标题" android:layout_toRightOf="@id/video_player_back" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/video_player_set" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/mo_video_player_set" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/video_player_foot" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/video_player_playOrPause" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/mo_video_player_play" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/video_player_next" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="30.0dip" android:src="@drawable/mo_video_player_next" android:layout_toRightOf="@id/video_player_playOrPause" android:layout_centerVertical="true" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/video_player_currentTime" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginLeft="30.0dip" android:text=" 00:00" android:layout_toRightOf="@id/video_player_next" android:layout_centerVertical="true" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/video_player_time" android:layout_width="wrap_content" android:layout_height="44.0dip" android:text=" 00:00" android:layout_toRightOf="@id/mo_video_player_seekBar" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/video_player_fullscreen" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/mo_videoplayer_cancel_fullscreen" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <com.uzmap.pkg.uzmodules.uzVideoPlayer.CustomSeekBar android:id="@id/mo_video_player_seekBar" android:layout_width="100.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/video_player_currentTime" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/video_player_more" android:background="#ff1c1c1c" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <LinearLayout android:orientation="horizontal" android:id="@id/volume_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/min_volume" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/mo_video_player_volumn_small" />
+                <com.uzmap.pkg.uzmodules.uzVideoPlayer.CustomSeekBar android:layout_gravity="center_vertical" android:id="@id/volume_seekBar" android:layout_width="100.0dip" android:layout_height="44.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/max_volume" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/mo_video_player_volumn_big" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/light_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/min_light" android:layout_width="15.0dip" android:layout_height="15.0dip" android:layout_marginLeft="20.0dip" android:src="@drawable/mo_video_player_light_small" />
+                <com.uzmap.pkg.uzmodules.uzVideoPlayer.CustomSeekBar android:layout_gravity="center_vertical" android:id="@id/light_seekBar" android:layout_width="100.0dip" android:layout_height="44.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/max_light" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/mo_video_player_light_big" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/video_player_process_layout" android:background="@drawable/mo_video_player_shape" android:visibility="gone" android:layout_width="160.0dip" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:layout_centerHorizontal="true" android:alpha="0.8">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/process_icon" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/mo_video_player_touch_forward" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/center_process" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="/" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/left_process" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="00:00" android:layout_toLeftOf="@id/center_process" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/right_process" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="00:00" android:layout_toRightOf="@id/center_process" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/video_player_light_layout" android:background="@drawable/mo_video_player_shape" android:visibility="gone" android:layout_width="160.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true" android:alpha="0.8">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/mo_video_player_touch_light" />
+        <com.uzmap.pkg.uzmodules.uzVideoPlayer.CustomSeekBar android:layout_gravity="center_horizontal" android:id="@id/touch_light_seekBar" android:layout_width="100.0dip" android:layout_height="44.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/video_player_volumn_layout" android:background="@drawable/mo_video_player_shape" android:visibility="gone" android:layout_width="160.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true" android:alpha="0.8">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/mo_video_player_touch_volumn" />
+        <com.uzmap.pkg.uzmodules.uzVideoPlayer.CustomSeekBar android:layout_gravity="center_horizontal" android:id="@id/touch_volumn_seekBar" android:layout_width="100.0dip" android:layout_height="44.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    </LinearLayout>
+</RelativeLayout>

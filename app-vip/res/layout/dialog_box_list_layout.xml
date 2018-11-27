@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+    <ListView android:id="@id/centerList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <View android:id="@id/topDivider" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/centerList" />
+    <View android:id="@id/bottomDivider" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/centerList" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/centerList" android:layout_alignParentBottom="true">
+        <Button android:id="@id/enterBtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

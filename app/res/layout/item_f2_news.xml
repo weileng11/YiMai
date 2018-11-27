@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:minHeight="@dimen/dp100"
+	android:layout_gravity="center"
+	android:layout_marginTop="@dimen/dp1"
+	android:layout_marginBottom="@dimen/dp1"
+	android:padding="@dimen/dp10"
+	android:background="@color/colorBackgroundFloating"
+	android:foreground="?attr/selectableItemBackground"
+	android:orientation="vertical"
+	>
+	
+	<LinearLayout
+		android:id="@+id/item_news_user"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center|left"
+		android:foreground="?attr/selectableItemBackground"
+		>
+		
+		<android.support.v7.widget.CardView
+			android:layout_width="@dimen/dp50"
+			android:layout_height="@dimen/dp50"
+			app:cardCornerRadius="@dimen/dp25"
+			app:cardBackgroundColor="#0fff"
+			app:cardElevation="@dimen/dp0"
+			>
+			
+			<ImageView
+				android:id="@+id/item_news_head"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:src="@mipmap/dft_avatar"
+				/>
+			
+		</android.support.v7.widget.CardView>
+		
+		<LinearLayout
+			android:layout_weight="1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp10"
+			android:orientation="horizontal"
+			android:gravity="center|left"
+			>
+			
+			<TextView
+				android:id="@+id/item_news_name"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:maxWidth="@dimen/dp120"
+				android:maxLines="1"
+				android:ellipsize="end"
+				android:text="未知名称"
+				android:drawablePadding="@dimen/dp4"
+				android:drawableRight="@mipmap/news_auth"
+				android:textColor="@color/textColorPrimary"
+				/>
+			
+			<TextView
+				android:id="@+id/item_news_stick"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/dp6"
+				android:padding="@dimen/dp4"
+				android:gravity="center"
+				android:text=""
+				android:textSize="@dimen/sp10"
+				android:textColor="@color/textColorInverse"
+				android:foreground="?attr/selectableItemBackground"
+				android:drawableRight="@mipmap/sticked"
+				/>
+		</LinearLayout>
+		
+		<android.support.v7.widget.CardView
+			android:id="@+id/item_news_contact"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp10"
+			app:cardBackgroundColor="#0fff"
+			>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:padding="@dimen/dp6"
+				android:drawablePadding="@dimen/dp2"
+				android:drawableLeft="@mipmap/news_contact"
+				android:text="联系他"
+				android:textSize="@dimen/sp_12"
+				android:textColor="@color/textColorInverse"
+				android:background="@color/textColor"
+				/>
+		</android.support.v7.widget.CardView>
+	</LinearLayout>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp1"
+		android:layout_marginTop="@dimen/dp10"
+		android:background="@color/colorBackground"
+		/>
+	
+	<TextView
+		android:id="@+id/item_news_content"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dp10"
+		android:hint="暂无内容"
+		android:maxLines="2"
+		/>
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dp10"
+		android:padding="@dimen/dp2"
+		android:text="查看全部"
+		android:textColor="#07f"
+		android:maxLines="2"
+		android:foreground="?attr/selectableItemBackground"
+		/>
+	
+	<km.view.KmRecyclerView
+		android:id="@+id/item_news_images"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dp10"
+		app:layoutManager="@string/GridLayoutManager"
+		app:spanCount="3"
+		tools:listitem="@layout/item_image"
+		tools:layout_height="@dimen/dp340"
+		/>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dp10"
+		android:orientation="horizontal"
+		android:gravity="center"
+		>
+		
+		<TextView
+			android:id="@+id/item_news_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:hint="未知时间"
+			/>
+		
+		<View
+			android:layout_width="@dimen/dp1"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="@dimen/dp10"
+			android:background="@color/colorBackground"
+			/>
+		
+		<TextView
+			android:id="@+id/item_news_address"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp10"
+			android:hint="未知地点"
+			/>
+		
+		<include layout="@layout/space" />
+		
+		<TextView
+			android:id="@+id/item_news_likes"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp10"
+			android:drawablePadding="@dimen/dp2"
+			android:drawableLeft="@mipmap/news_likes"
+			android:text="0"
+			/>
+		
+		<TextView
+			android:id="@+id/item_news_comments"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp10"
+			android:drawablePadding="@dimen/dp2"
+			android:drawableLeft="@mipmap/news_comments"
+			android:text="0"
+			/>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:layout_margin="@dimen/dp1"
+	android:padding="@dimen/dp10"
+	android:orientation="vertical"
+	android:gravity="center|left"
+	android:background="@color/colorBackgroundFloating"
+	android:foreground="?attr/selectableItemBackground"
+	>
+	
+	<TextView
+		android:id="@+id/item_good_name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:maxLength="100"
+		android:maxLines="1"
+		android:ellipsize="end"
+		android:hint="暂无数据"
+		android:textSize="@dimen/sp14"
+		android:textColor="@color/textColorPrimary"
+		/>
+	
+	<km.view.PriceView
+		android:id="@+id/item_good_price"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dp4"
+		android:gravity="center|left"
+		app:pvNowCurrency="¥"
+		app:pvNowOldSpace="@dimen/dp10"
+		app:pvNowTextColor="@color/price_now"
+		app:pvNowTextSize="@dimen/sp14"
+		app:pvOldCurrency="¥"
+		app:pvOldTextColor="@color/price_old"
+		app:pvOldTextSize="@dimen/sp14"
+		app:pvShowOld="false"
+		>
+		
+		<include layout="@layout/space" />
+		
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp10"
+			android:orientation="horizontal"
+			android:background="@drawable/f1_coupon"
+			android:gravity="center|left"
+			android:paddingLeft="@dimen/dp6"
+			android:paddingRight="@dimen/dp6"
+			tools:layout_height="@dimen/dp20"
+			>
+			
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:maxLength="4"
+				android:text="抵积分："
+				android:textSize="@dimen/sp12"
+				android:textColor="#f9535f"
+				/>
+			
+			<TextView
+				android:id="@+id/item_good_coupon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:maxLines="1"
+				android:text="0"
+				android:textSize="@dimen/sp12"
+				android:textColor="#f9535f"
+				/>
+		</LinearLayout>
+	</km.view.PriceView>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dp4"
+		>
+		
+		<ImageView
+			android:id="@+id/item_good_image"
+			android:layout_width="@dimen/dp60"
+			android:layout_height="@dimen/dp60"
+			android:layout_gravity="center"
+			android:src="@drawable/dft_item"
+			android:scaleType="fitXY"
+			/>
+		
+		<include layout="@layout/space" />
+		
+		<km.view.KmGoldNoteView
+			android:id="@+id/item_good_gold_note"
+			android:layout_width="@dimen/dp70"
+			android:layout_height="@dimen/dp30"
+			android:layout_gravity="bottom"
+			android:foreground="?attr/selectableItemBackground"
+			/>
+	</LinearLayout>
+</LinearLayout>

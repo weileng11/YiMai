@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/titleLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="center_vertical" android:id="@id/titleText" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <EditText android:layout_gravity="center_vertical" android:id="@id/titleInput" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/contentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/bottomBtnLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+            <Button android:gravity="center" android:id="@id/leftBtn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <Button android:gravity="center" android:id="@id/rightBtn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

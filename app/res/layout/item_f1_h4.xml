@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:orientation="vertical"
+	android:padding="@dimen/dp5"
+	>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_margin="@dimen/dp5"
+		>
+		
+		<ImageView
+			android:id="@+id/f1_h4_banner"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp50"
+			android:layout_gravity="center"
+			android:src="@mipmap/f1_goods_tuan"
+			/>
+		
+		<TextView
+			android:id="@+id/f1_h4_more"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="right"
+			android:padding="@dimen/dp4"
+			android:drawableRight="@mipmap/arrow_right_gray"
+			android:text="更多拼团"
+			android:foreground="?attr/selectableItemBackground"
+			/>
+		
+	</LinearLayout>
+	
+	<km.view.KmRecyclerView
+		android:id="@+id/f1_h4_list"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layoutManager="@string/LinearLayoutManager"
+		tools:listitem="@layout/item_good_x"
+		tools:layout_height="@dimen/dp130"
+		/>
+	
+</LinearLayout>

@@ -1,0 +1,15 @@
+
+set PKG="kameng.yimai"
+set ACT="km.ui.ActLaunch"
+
+adb shell pm list packages -f %PKG%
+
+adb shell dumpsys package %PKG%
+
+adb uninstall %PKG%
+
+adb install -r app-release.apk
+
+adb shell am start -n %PKG%/%ACT% -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
+
+adb shell am force-stop %PKG%

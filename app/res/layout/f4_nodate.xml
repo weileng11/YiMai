@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/f4_nodata"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:visibility="visible"
+	>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:paddingTop="@dimen/statusBarSize"
+		android:fitsSystemWindows="true"
+		android:background="@color/colorPrimaryDark"
+		>
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/actionBarSize"
+			>
+			
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="我的名片"
+				android:textColor="@color/textColorInverse"
+				android:textSize="@dimen/dp16"
+				/>
+		</FrameLayout>
+		
+	</LinearLayout>
+	
+	
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp300"
+		android:layout_margin="@dimen/dp25"
+		android:background="@mipmap/iv_mp_nodata"
+		android:scaleType="fitXY"
+		/>
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="您还没有创建自己的名片哦"
+		android:textColor="@color/grayColor_main"
+		android:textSize="@dimen/dp16"
+		/>
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginTop="@dimen/dp5"
+		android:text="添加自营产品，亿脉帮分销"
+		/>
+	
+	<android.support.v7.widget.CardView
+		android:id="@+id/f4_create"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:layout_marginLeft="@dimen/dp30"
+		android:layout_marginRight="@dimen/dp30"
+		android:layout_marginTop="40dp"
+		android:foreground="?attr/selectableItemBackground"
+		app:cardBackgroundColor="@color/color_grayness"
+		app:cardCornerRadius="@dimen/dp8"
+		app:cardElevation="@dimen/dp0"
+		app:cardMaxElevation="10dp"
+		app:contentPadding="@dimen/dp15"
+		>
+		
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="立即创建"
+			android:textColor="@color/cardview_light_background"
+			android:textSize="@dimen/dp15"
+			/>
+	</android.support.v7.widget.CardView>
+</LinearLayout>

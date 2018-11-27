@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.chihane</groupId>
+  <artifactId>JDAddressSelector</artifactId>
+  <version>1.1.4</version>
+  <packaging>aar</packaging>
+  <name>chihane/JDAddressSelector</name>
+  <description>京东 Android 客户端样式的级联地址选择器</description>
+  <url>https://github.com/chihane/JDAddressSelector</url>
+  <inceptionYear>2016</inceptionYear>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://api.github.com/licenses/mit</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>chihane</id>
+      <name>chihane</name>
+      <email>chihane@yeah.net</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git://github.com/chihane/JDAddressSelector.git</connection>
+    <developerConnection>scm:git://github.com/chihane/JDAddressSelector.git</developerConnection>
+    <url>git://github.com/chihane/JDAddressSelector.git</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>com.android.support</groupId>
+      <artifactId>appcompat-v7</artifactId>
+      <version>24.2.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.4</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.chihane</groupId>
+      <artifactId>AndroidUtils</artifactId>
+      <version>1.0.10</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.Raizlabs.DBFlow</groupId>
+      <artifactId>dbflow-core</artifactId>
+      <version>3.0.0-beta6</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.Raizlabs.DBFlow</groupId>
+      <artifactId>dbflow</artifactId>
+      <version>3.0.0-beta6</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+</project>

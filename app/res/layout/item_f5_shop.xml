@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_gravity="center"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_below="@+id/view"
+	android:layout_marginBottom="@dimen/dp10"
+	android:layout_marginLeft="@dimen/dp10"
+	android:layout_marginRight="@dimen/dp10"
+	android:foreground="?attr/selectableItemBackground"
+	app:cardBackgroundColor="@color/colorBackgroundFloating"
+	app:cardCornerRadius="@dimen/dp8"
+	app:cardElevation="@dimen/dp0"
+	app:cardMaxElevation="10dp"
+	>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			>
+			
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/dp10"
+				android:text="我的店铺"
+				android:textSize="@dimen/dp15"
+				android:textColor="@color/textColorPrimary"
+				android:textStyle="bold"
+				/>
+			
+			<include layout="@layout/space" />
+			
+			<TextView
+				android:id="@+id/f5_shop_more"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/dp10"
+				android:text="查看更多"
+				/>
+		</LinearLayout>
+		
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp1"
+			android:background="@color/colorBackground"
+			/>
+		
+		<LinearLayout
+			android:id="@+id/f5_shop_no_data"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/dp10"
+			android:orientation="vertical"
+			android:gravity="center"
+			>
+			
+			<ImageView
+				android:layout_width="@dimen/dp180"
+				android:layout_height="@dimen/dp140"
+				android:layout_margin="@dimen/dp10"
+				android:src="@mipmap/f5_shop_empty"
+				/>
+			
+			<Button
+				android:id="@+id/f5_shop_create"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="@dimen/dp10"
+				android:minHeight="@dimen/dp40"
+				android:padding="@dimen/dp10"
+				android:background="@drawable/round_button_bg"
+				android:text="创建我的店铺"
+				android:textColor="@color/colorAccent"
+				/>
+		</LinearLayout>
+		
+		<km.view.KmRecyclerView
+			android:id="@+id/f5_shop_list"
+			android:visibility="gone"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layoutManager="@string/GridLayoutManager"
+			app:spanCount="2"
+			tools:listitem="@layout/item_goods_type"
+			/>
+		
+	</LinearLayout>
+</android.support.v7.widget.CardView>

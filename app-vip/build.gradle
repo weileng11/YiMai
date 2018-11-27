@@ -1,0 +1,77 @@
+
+apply plugin: 'com.android.library'
+
+android{
+	buildToolsVersion '27.0.0'
+	compileSdkVersion 26
+	defaultConfig{
+		targetSdkVersion 24
+		minSdkVersion 19
+		ndk{
+			abiFilters = [
+					'armeabi',
+					//'armeabi-v7a',
+			]
+		}
+	}
+	
+	sourceSets{
+		main{
+			manifest.srcFile 'AndroidManifest.xml'
+			java.srcDirs = ['src']
+			resources.srcDirs = ['src']
+			aidl.srcDirs = ['src']
+			renderscript.srcDirs = ['src']
+			res.srcDirs = ['res']
+			assets.srcDirs = ['assets']
+			jniLibs.srcDirs = [
+					'jniLibs',
+			]
+		}
+	}
+	
+	signingConfigs{
+		release{
+			storeFile file(".key/release.jks")
+			keyAlias "chengshituike1"
+			keyPassword "aini1314"
+			storePassword "aini1314"
+		}
+	}
+	
+	buildTypes{
+		debug{
+			signingConfig signingConfigs.release
+			debuggable false
+			minifyEnabled false
+		}
+		release{
+			signingConfig signingConfigs.release
+			debuggable false
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard.pro"
+			matchingFallbacks = ['release', 'preview', 'debug']
+		}
+		
+		preview{
+			matchingFallbacks = ['release', 'preview', 'debug']
+		}
+		debug{
+			matchingFallbacks = ['release', 'preview', 'debug']
+		}
+		
+		beta {
+			//关键代码，release， debug为library中已有buildType
+			matchingFallbacks = ['release', 'debug']
+		}
+		dev {
+			matchingFallbacks = ["debug"]
+		}
+	}
+}
+
+
+dependencies{
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	//compile 'com.android.support:appcompat-v7:24.0.0'
+}

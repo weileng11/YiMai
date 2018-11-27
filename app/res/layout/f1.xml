@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<km.view.KmRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/f1_refresh"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	
+	<km.view.KmRefreshHeader
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+		
+		<km.view.KmRecyclerView
+			android:id="@+id/f1_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layoutManager="@string/LinearLayoutManager"
+			tools:listitem="@layout/item_f1_h1"
+			/>
+		
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:orientation="horizontal"
+			android:paddingTop="@dimen/statusBarSize"
+			android:background="@color/colorAccent"
+			>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/actionBarSize"
+				android:orientation="horizontal"
+				android:gravity="center"
+				>
+				
+				<TextView
+					android:id="@+id/f1_city"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/dp40"
+					android:minWidth="@dimen/dp40"
+					android:layout_marginLeft="@dimen/dp4"
+					android:gravity="center"
+					android:drawableLeft="@mipmap/banner_locate"
+					android:text="未知"
+					android:textColor="#fff"
+					android:foreground="?attr/selectableItemBackground"
+					/>
+				
+				<android.support.v7.widget.CardView
+					android:layout_weight="1"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/dp30"
+					android:layout_marginLeft="@dimen/dp4"
+					android:layout_marginRight="@dimen/dp4"
+					app:cardBackgroundColor="#6fff"
+					app:cardCornerRadius="@dimen/dp15"
+					app:cardElevation="@dimen/dp0"
+					app:contentPaddingLeft="@dimen/dp10"
+					app:contentPaddingRight="@dimen/dp10"
+					android:foreground="?attr/selectableItemBackground"
+					>
+					
+					<TextView
+						android:id="@+id/f1_search"
+						android:layout_weight="1"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_gravity="center_vertical"
+						android:drawablePadding="10dp"
+						android:drawableLeft="@mipmap/banner_search"
+						android:gravity="center|left"
+						android:hint=""
+						android:textColor="#fff"
+						/>
+				</android.support.v7.widget.CardView>
+				
+				<ImageView
+					android:id="@+id/f1_news"
+					android:layout_width="@dimen/dp40"
+					android:layout_height="@dimen/dp40"
+					android:layout_marginRight="@dimen/dp4"
+					android:gravity="center"
+					android:padding="@dimen/dp4"
+					android:src="@mipmap/banner_news"
+					android:scaleType="centerInside"
+					android:foreground="?attr/selectableItemBackground"
+					/>
+			
+			</LinearLayout>
+		
+		</FrameLayout>
+		
+	</FrameLayout>
+	
+	<km.view.KmRefreshFooter
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+</km.view.KmRefreshLayout>

@@ -1,0 +1,16 @@
+*.iml
+*/.externalNativeBuild
+/.idea
+/.gradle
+/gradle
+/build
+*/build
+/captures
+/local.properties
+.DS_Store
+*.apk
+a.txt
+a.json
+/output
+/release
+/.gitignore2

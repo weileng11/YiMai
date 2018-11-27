@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="@dimen/dp300"
+	android:layout_height="@dimen/dp360"
+	android:layout_gravity="center"
+	android:background="@mipmap/f5_invite"
+	>
+	
+	<EditText
+		android:id="@+id/invite_input"
+		android:layout_width="@dimen/dp160"
+		android:layout_height="@dimen/dp30"
+		android:layout_marginTop="@dimen/dp130"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:background="@null"
+		android:maxLength="10"
+		android:hint="输入邀请码"
+		android:textSize="@dimen/dp16"
+		/>
+	
+	<View
+		android:id="@+id/invite_start"
+		android:layout_width="@dimen/dp200"
+		android:layout_height="@dimen/dp40"
+		android:layout_marginTop="@dimen/dp90"
+		android:layout_gravity="center"
+		android:background="@null"
+		android:foreground="?attr/selectableItemBackground"
+		/>
+	
+	<View
+		android:id="@+id/invite_close"
+		android:layout_width="@dimen/dp40"
+		android:layout_height="@dimen/dp40"
+		android:layout_marginTop="@dimen/dp30"
+		android:layout_gravity="center"
+		android:background="@null"
+		/>
+	
+</LinearLayout>

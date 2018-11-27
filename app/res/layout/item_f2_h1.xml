@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	>
+	
+	<km.view.KmBanner
+		android:id="@+id/f2_h1_banner"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/banner_height"
+		tools:background="@drawable/dft_item"
+		/>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="@dimen/statusBarSize"
+		android:fitsSystemWindows="true"
+		android:orientation="vertical"
+		>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:minHeight="@dimen/actionBarSize"
+			android:gravity="center"
+			android:orientation="horizontal"
+			>
+			
+			<TextView
+				android:id="@+id/f2_h1_city"
+				android:layout_width="wrap_content"
+				android:layout_height="@dimen/dp40"
+				android:minWidth="@dimen/dp40"
+				android:layout_marginLeft="@dimen/dp4"
+				android:gravity="center"
+				android:drawableLeft="@mipmap/banner_locate"
+				android:text="未知"
+				android:textColor="#fff"
+				android:foreground="?attr/selectableItemBackground"
+				/>
+			
+			<android.support.v7.widget.CardView
+				android:layout_weight="1"
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dp30"
+				android:layout_marginLeft="@dimen/dp4"
+				android:layout_marginRight="@dimen/dp4"
+				app:cardBackgroundColor="#6000"
+				app:cardCornerRadius="@dimen/dp15"
+				app:cardElevation="@dimen/dp0"
+				app:contentPaddingLeft="@dimen/dp10"
+				app:contentPaddingRight="@dimen/dp10"
+				android:foreground="?attr/selectableItemBackground"
+				>
+				
+				<TextView
+					android:id="@+id/f2_h1_search"
+					android:layout_weight="1"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_gravity="center_vertical"
+					android:drawablePadding="10dp"
+					android:drawableLeft="@mipmap/banner_search"
+					android:gravity="center|left"
+					android:hint=""
+					android:textColor="#fff"
+					/>
+			</android.support.v7.widget.CardView>
+			
+			<ImageView
+				android:id="@+id/f2_h1_news"
+				android:layout_width="@dimen/dp40"
+				android:layout_height="@dimen/dp40"
+				android:layout_marginRight="@dimen/dp4"
+				android:gravity="center"
+				android:padding="@dimen/dp4"
+				android:src="@mipmap/banner_news"
+				android:scaleType="centerInside"
+				android:foreground="?attr/selectableItemBackground"
+				/>
+		</LinearLayout>
+		
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center|left"
+			android:orientation="horizontal"
+			>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#fff"
+				android:text="热门标签："
+				android:padding="@dimen/dp4"
+				/>
+			
+			<km.view.KmRecyclerView
+				android:id="@+id/f2_h1_tags"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				app:layoutManager="@string/GridLayoutManager"
+				app:spanCount="1"
+				tools:listitem="@layout/item_tag"
+				/>
+		
+		</LinearLayout>
+	
+	</LinearLayout>
+</FrameLayout>

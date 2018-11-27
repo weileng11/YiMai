@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:focusable="true"
+	android:focusableInTouchMode="true"
+	android:orientation="vertical"
+	>
+	
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorBackgroundFloating"
+		>
+		
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/colorPrimaryDark"
+			android:paddingTop="@dimen/statusBarSize"
+			android:fitsSystemWindows="true"
+			>
+			<android.support.v4.widget.Space
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/actionBarSize"
+				android:layout_marginBottom="@dimen/actionBarSize"
+				/>
+		</FrameLayout>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:paddingTop="@dimen/statusBarSize"
+			android:fitsSystemWindows="true"
+			>
+			<FrameLayout
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/actionBarSize"
+				>
+				
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:text="我的名片"
+					android:textColor="@color/textColorInverse"
+					android:textSize="@dimen/dp16"
+					/>
+				
+				<TextView
+					android:id="@+id/txv_mp_bj"
+					android:layout_width="wrap_content"
+					android:layout_height="@dimen/dp40"
+					android:layout_gravity="center|right"
+					android:layout_marginRight="@dimen/dp10"
+					android:padding="@dimen/dp10"
+					android:text="编辑"
+					android:textColor="@color/textColorInverse"
+					android:textSize="@dimen/sp14"
+					/>
+			</FrameLayout>
+			
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/dp160"
+				android:layout_marginLeft="@dimen/dp15"
+				android:layout_marginRight="@dimen/dp15"
+				android:layout_marginBottom="@dimen/dp10"
+				android:background="@mipmap/f4_card_bg"
+				>
+				
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_margin="@dimen/dp8"
+					>
+					
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						>
+						
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="@dimen/dp5"
+							android:layout_marginTop="@dimen/dp10"
+							android:orientation="vertical"
+							>
+							
+							<TextView
+								android:id="@+id/f4_card_name"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="未知名称"
+								android:textColor="@color/grayColor_main"
+								android:textSize="@dimen/dp16"
+								/>
+							
+							<TextView
+								android:id="@+id/f4_card_job"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="@dimen/dp3"
+								android:text="未知职位"
+								android:textColor="#786b48"
+								android:textSize="@dimen/sp14"
+								/>
+						</LinearLayout>
+						
+						<km.view.RoundImageView
+							android:id="@+id/f4_card_head"
+							android:layout_width="@dimen/dp60"
+							android:layout_height="@dimen/dp60"
+							android:layout_alignParentRight="true"
+							android:layout_marginRight="@dimen/dp10"
+							android:layout_marginTop="@dimen/dp10"
+							android:src="@mipmap/dft_avatar"
+							/>
+					</RelativeLayout>
+					
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/dp3"
+						android:layout_marginTop="@dimen/dp5"
+						>
+						
+						<LinearLayout
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:orientation="vertical"
+							>
+							
+							<TextView
+								android:id="@+id/f4_card_mobile"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="@dimen/dp4"
+								android:drawablePadding="@dimen/dp2"
+								android:drawableLeft="@mipmap/f4_card_phone"
+								android:text="未知手机号"
+								android:textSize="@dimen/sp12"
+								android:textColor="#786b48"
+								/>
+							
+							<TextView
+								android:id="@+id/f4_card_weixin"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="@dimen/dp4"
+								android:drawablePadding="@dimen/dp2"
+								android:drawableLeft="@mipmap/f4_card_wx"
+								android:text="未知微信号"
+								android:textSize="@dimen/sp12"
+								android:textColor="#786b48"
+								/>
+							
+							<TextView
+								android:id="@+id/f4_card_company"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginTop="@dimen/dp4"
+								android:drawablePadding="@dimen/dp2"
+								android:drawableLeft="@mipmap/f4_card_company"
+								android:text="未知公司名"
+								android:textSize="@dimen/sp12"
+								android:textColor="#786b48"
+								/>
+						</LinearLayout>
+						
+						<android.support.v7.widget.CardView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:layout_margin="@dimen/dp10"
+							android:foreground="?attr/selectableItemBackground"
+							app:cardBackgroundColor="@color/colorBackgroundFloating"
+							app:cardElevation="@dimen/dp0"
+							>
+							
+							<ImageView
+								android:id="@+id/f4_card_logo"
+								android:layout_width="@dimen/dp40"
+								android:layout_height="@dimen/dp40"
+								android:layout_gravity="center"
+								android:padding="@dimen/dp2"
+								android:src="@mipmap/f4_card_logo"
+								android:scaleType="fitXY"
+								/>
+						</android.support.v7.widget.CardView>
+					</RelativeLayout>
+				</LinearLayout>
+			</LinearLayout>
+		
+		</LinearLayout>
+		
+	</FrameLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/dp10"
+		android:orientation="horizontal"
+		android:background="@color/colorBackgroundFloating"
+		>
+		
+		<TextView
+			android:id="@+id/f4_card_hot"
+			android:layout_weight="1"
+			android:layout_width="@dimen/dp0"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp5"
+			android:drawableLeft="@mipmap/contacts_rq"
+			android:gravity=""
+			android:text="人气100"
+			/>
+		
+		<TextView
+			android:id="@+id/f4_card_likes"
+			android:layout_weight="1"
+			android:layout_width="@dimen/dp0"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp5"
+			android:drawableLeft="@mipmap/contacts_dz"
+			android:gravity=""
+			android:text="点赞100"
+			/>
+		
+		<TextView
+			android:id="@+id/f4_card_follows"
+			android:layout_weight="1"
+			android:layout_width="@dimen/dp0"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp5"
+			android:drawableLeft="@mipmap/contacts_sc"
+			android:gravity=""
+			android:text="被收藏100"
+			/>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:background="@color/colorBackgroundFloating"
+		>
+		
+		<TextView
+			android:id="@+id/ll_mp_jia"
+			android:layout_weight="1"
+			android:layout_width="@dimen/dp0"
+			android:layout_height="wrap_content"
+			android:paddingTop="@dimen/dp10"
+			android:paddingBottom="@dimen/dp10"
+			android:drawablePadding="@dimen/dp4"
+			android:drawableTop="@mipmap/iv_mp_jia"
+			android:gravity="center"
+			android:text="名片夹"
+			android:foreground="?attr/selectableItemBackground"
+			/>
+		<TextView
+			android:id="@+id/ll_code"
+			android:layout_weight="1"
+			android:layout_width="@dimen/dp0"
+			android:layout_height="wrap_content"
+			android:paddingTop="@dimen/dp10"
+			android:paddingBottom="@dimen/dp10"
+			android:drawablePadding="@dimen/dp4"
+			android:drawableTop="@mipmap/iv_mp_code"
+			android:gravity="center"
+			android:text="二维码"
+			android:foreground="?attr/selectableItemBackground"
+			/>
+		
+		<TextView
+			android:id="@+id/ll_phone"
+			android:layout_weight="1"
+			android:layout_width="@dimen/dp0"
+			android:layout_height="wrap_content"
+			android:paddingTop="@dimen/dp10"
+			android:paddingBottom="@dimen/dp10"
+			android:drawablePadding="@dimen/dp4"
+			android:drawableTop="@mipmap/iv_mp_phone"
+			android:gravity="center"
+			android:text="电话"
+			android:foreground="?attr/selectableItemBackground"
+			/>
+		
+		<TextView
+			android:id="@+id/ll_dh"
+			android:layout_weight="1"
+			android:layout_width="@dimen/dp0"
+			android:layout_height="wrap_content"
+			android:paddingTop="@dimen/dp10"
+			android:paddingBottom="@dimen/dp10"
+			android:drawablePadding="@dimen/dp4"
+			android:drawableTop="@mipmap/iv_mp_dh"
+			android:gravity="center"
+			android:text="导航"
+			android:foreground="?attr/selectableItemBackground"
+			/>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dp10"
+		android:orientation="vertical"
+		android:background="@color/colorBackgroundFloating"
+		>
+		
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/dp10"
+			android:text="我的录音"
+			/>
+		
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp1"
+			android:background="@color/grayColor_line"
+			/>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			>
+			
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone"
+				>
+				
+				<km.view.RoundImageView
+					android:id="@+id/f4_card_head_audio"
+					android:layout_width="@dimen/dp36"
+					android:layout_height="@dimen/dp36"
+					android:layout_margin="@dimen/dp10"
+					android:src="@mipmap/dft_avatar"
+					/>
+			</LinearLayout>
+			
+			<Button
+				android:id="@+id/btn_mp_video"
+				android:layout_width="@dimen/dp120"
+				android:layout_height="@dimen/dp36"
+				android:layout_gravity="center"
+				android:layout_margin="@dimen/dp20"
+				android:background="@drawable/round_button_bg"
+				android:text="创建我的录音"
+				android:textColor="@color/colorAccent"
+				/>
+		</LinearLayout>
+		
+	</LinearLayout>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp15"
+		android:background="@color/grayColor_line"
+		/>
+</LinearLayout>

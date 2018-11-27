@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<dimen name="check_box_size">24dp</dimen>
+	
+	<string name="check_box_path_off">
+		M 19,3
+		h -14
+		c -1.11,0 -2,0.9 -2,2
+		v 14
+		c 0,1.1 0.89,2 2,2
+		h 14
+		c 1.11,0 2,-0.9 2,-2
+		v -14
+		c 0,-1.1 -0.89,-2 -2,-2
+		z
+		M 12,19
+		l -7,0 0,-14
+		L 12,5
+		l 7,0
+		L 19,19
+		l -10,0
+		z
+	</string>
+	
+	<string name="check_box_path_on">
+		M 19,3
+		h -14
+		c -1.11,0 -2,0.9 -2,2
+		v 14
+		c 0,1.1 0.89,2 2,2
+		h 14
+		c 1.11,0 2,-0.9 2,-2
+		v -14
+		c 0,-1.1 -0.89,-2 -2,-2
+		z
+		M 10,17
+		l -5,-5 1.41,-1.41
+		L 10,14.17
+		l 7.59,-7.59
+		L 19,8
+		l -9,9
+		z
+	</string>
+	
+	<string name="check_box_path_from_on_to_off">
+		M 19,3
+		h -14
+		c -1.11,0 -2,0.9 -2,2
+		v 14
+		c 0,1.1 0.89,2 2,2
+		h 14
+		c 1.11,0 2,-0.9 2,-2
+		v -14
+		c 0,-1.1 -0.89,-2 -2,-2
+		z
+		M 12,12
+		l 0,0 0,0
+		L 12,12
+		l 0,0
+		L 12,12
+		l 0,0
+		z
+	</string>
+	
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="kameng.yimai"
+	android:installLocation="auto"
+	android:versionName="2.0"
+	android:versionCode="9"
+	>
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<!--8.0安装应用未知来源-->
+	<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+	
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+	<supports-screens
+		android:anyDensity="true"
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:largeScreens="true"
+		android:xlargeScreens="true"
+		/>
+	
+	<application
+		android:name="km.app.App"
+		android:icon="@mipmap/appicon"
+		android:label="@string/appname"
+		android:theme="@style/KmTheme.NoActionBar"
+		tools:replace="android:name,android:icon,android:label"
+		>
+		
+		<activity
+			android:name="km.ui.ActLaunch"
+			android:launchMode="singleTop"
+			android:theme="@style/KmTheme.Launch"
+			>
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name="km.ui.ActHome"
+			android:theme="@style/KmTheme.Translucent"
+			/>
+		
+		<activity android:name="km.ui.ActLogin"
+			android:theme="@style/KmTheme.Login"
+			/>
+		
+		<activity android:name="km.ui.ActPhoneBind" />
+		
+		<activity android:name="km.ui.ActCityPicker" />
+		
+		<activity android:name="km.ui.ActWeb" />
+		
+		<activity android:name="km.ui.ActView"
+			android:enabled="false"
+			>
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+				<action android:name="android.intent.action.VIEW"/>
+				<data android:mimeType="application/apk" />
+			</intent-filter>
+		</activity>
+		
+		<activity
+			android:name=".wxapi.WXEntryActivity"
+			android:exported="true"
+			android:launchMode="singleTop"
+			android:configChanges="orientation|keyboardHidden|screenSize"
+			android:theme="@style/KmTheme.Transparent"
+			/>
+		
+		<activity
+			android:name=".wxapi.WXPayEntryActivity"
+			android:exported="true"
+			android:launchMode="singleTop"
+			android:configChanges="orientation|keyboardHidden|screenSize"
+			android:theme="@style/KmTheme.Transparent"
+			/>
+		
+		<receiver android:name="km.util.DownloadReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+			</intent-filter>
+		</receiver>
+		
+		<provider
+			android:name="km.app.FileProvider"
+			android:authorities="auth:${packageName}.FileProvider"
+			android:grantUriPermissions="true"
+			android:exported="false"
+			>
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/file_provider"
+				/>
+		</provider>
+		
+		<!--百度地图-->
+		<service
+			android:name="com.baidu.location.f"
+			android:enabled="true"
+			/>
+		<meta-data
+			android:name="com.baidu.lbsapi.API_KEY"
+			android:value="RCDcBmQCvvzEUgxo2m4hx7Otm8Q63ZYB"
+			/>
+	</application>
+</manifest>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/f5_h3_box1"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="@dimen/dp10"
+	android:layout_marginLeft="@dimen/dp10"
+	android:layout_marginRight="@dimen/dp10"
+	android:layout_gravity="center"
+	android:foreground="?attr/selectableItemBackground"
+	app:cardBackgroundColor="@color/colorBackgroundFloating"
+	app:cardCornerRadius="@dimen/dp8"
+	app:cardElevation="@dimen/dp1"
+	>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			>
+			
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/dp10"
+				android:text="我的名片"
+				android:textStyle="bold"
+				android:textColor="@color/grayColor_main"
+				android:textSize="@dimen/dp15"
+				/>
+			
+			<include layout="@layout/space" />
+			
+			<TextView
+				android:id="@+id/f5_card_update"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/dp10"
+				android:text="修改"
+				/>
+		</LinearLayout>
+		
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp1"
+			android:background="@color/grayColor_line"
+			/>
+		
+		<km.view.KmRecyclerView
+			android:id="@+id/f5_h3_list"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			app:layoutManager="@string/GridLayoutManager"
+			app:spanCount="4"
+			tools:listitem="@layout/item_count"
+			/>
+	</LinearLayout>
+</android.support.v7.widget.CardView>

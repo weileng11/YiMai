@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.chihane</groupId>
+  <artifactId>AndroidUtils</artifactId>
+  <version>1.0.10</version>
+  <packaging>aar</packaging>
+  <name>Utils</name>
+  <description>Some Android utils.</description>
+  <url>https://github.com/mlxy/AndroidUtils</url>
+  <inceptionYear>2015</inceptionYear>
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>https://raw.githubusercontent.com/mlxy/AndroidUtils/master/LICENSE</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>mlxy</id>
+      <name>Chihane Habana</name>
+      <email>chihane@yeah.net</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>https://github.com/mlxy/AndroidUtils.git</connection>
+    <developerConnection>https://github.com/mlxy/AndroidUtils.git</developerConnection>
+    <url>https://github.com/mlxy/AndroidUtils</url>
+  </scm>
+</project>

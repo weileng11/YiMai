@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dialogTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_centerHorizontal="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/dialogTitle">
+        <EditText android:id="@id/inputEdit" android:background="#ffff0000" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <View android:id="@id/editLine" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="3.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/bottomLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <RelativeLayout android:orientation="horizontal" android:id="@id/btnGroup" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:gravity="center" android:id="@id/leftBtn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+            <Button android:id="@id/rightBtn" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+            <View android:id="@id/btnTopDivider" android:background="#ff000000" android:layout_width="1.0px" android:layout_height="wrap_content" android:layout_alignTop="@id/leftBtn" android:layout_alignBottom="@id/leftBtn" android:layout_centerHorizontal="true" />
+            <View android:id="@id/btnBetweenDivider" android:background="#ffff0000" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignTop="@id/rightBtn" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

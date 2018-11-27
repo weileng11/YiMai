@@ -1,0 +1,138 @@
+
+apply plugin: "com.android.application"
+
+android{
+	
+	buildToolsVersion "27.0.0"
+	compileSdkVersion 26
+	
+	defaultConfig{
+		minSdkVersion 19
+		targetSdkVersion 26
+		
+		ndk{
+			abiFilters = [
+					'armeabi',
+					//'armeabi-v7a',
+			]
+		}
+		
+		aaptOptions.cruncherEnabled = false
+		aaptOptions.useNewCruncher = false
+	}
+	
+	sourceSets{
+		main{
+			manifest.srcFile 'AndroidManifest.xml'
+			java.srcDirs = ['src']
+			resources.srcDirs = ['src']
+			aidl.srcDirs = ['src']
+			renderscript.srcDirs = ['src']
+			res.srcDirs = ['res']
+			assets.srcDirs = ['assets']
+			jniLibs.srcDirs = [
+					'jniLibs',
+					'jniBaiduMap',
+			]
+		}
+	}
+	
+	signingConfigs{
+		debug{
+			//MD5: D6:F43:86:3D:CF:2F:43:09:5C:91:68:27:78:54:53:4F
+			//SHA1: 5D:87:28:93:2C:DC:12:D0:7C:E2:C1:EF:14:CE:A3:77:E5:CB:9A:0A
+			storeFile file("${rootDir.path}/.key/debug.keystore")
+			keyAlias "androiddebugkey"
+			keyPassword "android"
+			storePassword "android"
+		}
+		release{
+			//MD5: 74:D5:30:70:E1:48:49:13:40:20:E4:8F:CD:A4:DC:96
+			//SHA1: 4B:B6:B9:64:BB:D2:ED:2C:94:86:E0:D9:1D:91:BF:6E:26:24:82:41
+			storeFile file("${rootDir.path}/.key/release.jks")
+			keyAlias "kameng"
+			keyPassword "kameng"
+			storePassword "kameng"
+		}
+	}
+	
+	buildTypes{T
+		debug{
+			signingConfig signingConfigs.release
+			debuggable true
+			minifyEnabled false
+		}
+		release{
+			signingConfig signingConfigs.release
+			debuggable false
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard.pro"
+		}
+		
+		preview{
+			matchingFallbacks = ['release', 'preview', 'debug']
+		}
+		debug{
+			matchingFallbacks = ['release', 'preview', 'debug']
+		}
+		
+		beta {
+			//关键代码，release， debug为library中已有buildType
+			matchingFallbacks = ['release', 'debug']
+		}
+		dev {
+			matchingFallbacks = ["debug"]
+		}
+	}
+	lintOptions {
+		checkReleaseBuilds false
+		abortOnError false
+	}
+	
+	compileOptions{
+		sourceCompatibility JavaVersion.VERSION_1_7
+		targetCompatibility JavaVersion.VERSION_1_7
+	}
+	
+	dexOptions{
+		javaMaxHeapSize "4g"
+	}
+}
+
+repositories{
+	flatDir{ dirs 'libs/aar' }
+	maven{ url "${rootDir.path}/.m2" }
+//	jcenter()
+//	maven{ url("https://maven.google.com/") }
+}
+
+dependencies{
+	implementation fileTree(include: ['*.jar'], dir: 'libs')
+	
+	//	implementation project(':app-vip')
+	
+	//compile(name: 'vip', ext: 'aar')
+	implementation 'com.android.support:appcompat-v7:26.0.0'
+	implementation 'com.android.support:recyclerview-v7:26.0.0'
+	implementation 'com.android.support:cardview-v7:26.0.0'
+	implementation 'com.android.support:design:26.0.0'
+	implementation 'com.android.support:multidex:1.0.0'
+	annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+	implementation 'com.jakewharton:butterknife:8.4.0'
+	annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+	implementation 'com.github.bumptech.glide:okhttp3-integration:4.0.0'
+	implementation 'com.github.bumptech.glide:glide:4.0.0'
+	implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+	implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+	implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+	implementation 'com.squareup.okhttp3:logging-interceptor:3.3.0'
+	implementation 'io.reactivex:rxandroid:1.2.1'
+	implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+	implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5'
+	implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5'
+	implementation 'com.github.chihane:JDAddressSelector:1.1.4'
+	implementation 'com.youth.banner:banner:1.4.10'
+	
+	//compile 'com.bigkoo:ConvenientBanner:2.1.4'
+	implementation project(':app-vip')
+}

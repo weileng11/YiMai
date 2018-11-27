@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="kameng.yimai.vip"
+	android:versionName="1.0"
+	android:versionCode="1"
+	>
+	
+	<supports-screens
+		android:anyDensity="true"
+		android:largeScreens="true"
+		android:normalScreens="true"
+		android:resizeable="true"
+		android:smallScreens="true"
+		android:xlargeScreens="true"
+		/>
+	
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	
+	<permission
+		android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+		android:protectionLevel="signature"
+		/>
+	
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-feature
+		android:name="android.hardware.camera.autofocus"
+		android:required="false"
+		/>
+	
+	<application
+		android:name="vip.VipApp"
+		android:hardwareAccelerated="true"
+		android:icon="@drawable/uz_icon"
+		android:label="@string/app_name"
+		android:largeHeap="true"
+		>
+		
+		<meta-data
+			android:name="uz_version"
+			android:value="1.2.83"
+			/>
+		
+		<meta-data
+			android:name="android.max_aspect"
+			android:value="2.4"
+			/>
+		
+		<activity
+			android:name="vip.VipActivity"
+			android:launchMode="singleTask"
+			android:screenOrientation="portrait"
+			android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+			android:windowSoftInputMode="adjustUnspecified|stateUnspecified"
+			android:theme="@style/AppTheme.Launch"
+			>
+			<!--
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			-->
+		</activity>
+		
+		<activity
+			android:name="com.uzmap.pkg.uzmodules.browser.BrowserActivity"
+			android:alwaysRetainTaskState="true"
+			android:configChanges="locale|keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+			android:exported="false"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			/>
+		
+		<activity
+			android:name="com.uzmap.pkg.uzmodules.uzVideoPlayer.VideoActivity"
+			android:configChanges="orientation|screenSize"
+			android:screenOrientation="sensorLandscape"
+			android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+			/>
+		
+		<activity
+			android:name="com.tencent.smtt.sdk.VideoActivity"
+			android:alwaysRetainTaskState="true"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+			android:exported="false"
+			android:launchMode="singleTask"
+			>
+			<intent-filter>
+				<action android:name="com.tencent.smtt.tbs.video.PLAY" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		
+		<provider
+			android:name="com.uzmap.pkg.uzapp.UProvider"
+			android:authorities="com.chengshituike1.jns.ups"
+			android:exported="false"
+			android:label="udmg"
+			/>
+		<provider
+			android:name="com.uzmap.pkg.uzapp.DataProvider"
+			android:authorities="com.chengshituike1.jns.upms"
+			android:exported="false"
+			android:grantUriPermissions="true"
+			/>
+		
+		<service
+			android:name="com.uzmap.pkg.uzsocket.UPnsService"
+			android:enabled="true"
+			android:label="upns"
+			android:process=":remote"
+			/>
+		<receiver
+			android:name="com.uzmap.pkg.uzapp.UPExtraBridge"
+			android:enabled="true"
+			android:exported="false"
+			android:label="upns"
+			android:process=":remote"
+			>
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_REMOVED" />
+				<action android:name="android.intent.action.PACKAGE_ADDED" />
+				
+				<data android:scheme="package" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+				<action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.apicloud.notification" />
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/cardview_light_background"
+	android:orientation="vertical"
+	>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp15"
+		android:layout_marginTop="@dimen/dp15"
+		android:background="@color/grayColor_line"
+		/>
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/dp15"
+		android:text="个性签名"
+		/>
+	
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/dp1"
+		android:background="@color/grayColor_line"
+		/>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/dp12"
+		android:orientation="horizontal"
+		>
+		
+		<ImageView
+			android:layout_width="@dimen/dp15"
+			android:layout_height="@dimen/dp16"
+			android:background="@mipmap/contacts_qm"
+			/>
+		
+		<TextView
+			android:id="@+id/txv_domain"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/dp10"
+			android:text="个性签名"
+			android:textSize="@dimen/sp14"
+			android:textColor="@color/color_cs"
+			/>
+	</LinearLayout>
+</LinearLayout>

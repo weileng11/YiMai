@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<km.view.KmRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/f5_refresh"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+	
+	<km.view.KmRefreshHeader
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		/>
+	
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+		
+		<km.view.KmRecyclerView
+			android:id="@+id/f5_list"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layoutManager="@string/LinearLayoutManager"
+			tools:listitem="@layout/item_f5_h1"
+			/>
+		
+		<LinearLayout
+			android:id="@+id/f5_float"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="@dimen/dp10"
+			android:layout_marginBottom="@dimen/dp100"
+			android:layout_gravity="bottom|right"
+			android:foreground="?attr/selectableItemBackground"
+			android:gravity="center"
+			android:orientation="vertical"
+			>
+			
+			<km.view.GifImageView
+				android:layout_width="@dimen/dp40"
+				android:layout_height="@dimen/dp40"
+				android:src="@mipmap/f5_float_help"
+				/>
+			
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/dp2"
+				android:padding="@dimen/dp2"
+				android:gravity="center"
+				android:text="客服"
+				android:textSize="@dimen/dp12"
+				android:textColor="#fff"
+				android:background="#777"
+				/>
+			
+		</LinearLayout>
+	</FrameLayout>
+	
+</km.view.KmRefreshLayout>

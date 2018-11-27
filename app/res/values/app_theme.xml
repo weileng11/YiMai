@@ -1,0 +1,109 @@
+<resources>
+	
+	<color name="colorPrimaryDark">#222</color>
+	<color name="colorPrimary">#333</color>
+	<color name="colorAccent">#f07212</color>
+	<color name="colorAccent2">#f5d166</color>
+	
+	<color name="colorControlNormal">#aaa</color>
+	<color name="colorButtonNormal">#ccc</color>
+	<color name="colorBackgroundFloating">#fff</color>
+	<color name="colorBackground">#eee</color>
+	<color name="colorForeground">#111</color>
+	<color name="textColorInverse">#fff</color>
+	<color name="textColorPrimary">#222</color>
+	<color name="textColor">#555</color>
+	
+	<dimen name="statusBarSize">@dimen/dp25</dimen>
+	<dimen name="actionBarSize">@dimen/dp48</dimen>
+	
+	<style name="Button.Colored" parent="Widget.AppCompat.Button.Colored">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:textColor">@color/textColorInverse</item>
+	</style>
+	
+	<style name="Button.Inverse" parent="Widget.AppCompat.Button">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textAllCaps">false</item>
+		<item name="android:textColor">@color/textColorInverse</item>
+		<item name="android:backgroundTint">@color/textColorPrimary</item>
+	</style>
+	
+	<style name="ActionBar" parent="Widget.AppCompat.ActionBar">
+		<item name="contentInsetStart">0dp</item><!--ActionBar边距-->
+		<item name="contentInsetEnd">0dp</item>
+		<item name="background">?android:attr/colorPrimary</item>
+		<item name="titleTextStyle">@style/ActionBar</item>
+		<item name="android:textColor">@color/textColorInverse</item>
+	</style>
+	
+	<style name="Overflow" parent="Widget.AppCompat.ActionButton.Overflow">
+		<item name="android:tint">@color/textColorInverse</item>
+	</style>
+	
+	<style name="DrawerArrow" parent="Widget.AppCompat.DrawerArrowToggle">
+		<item name="spinBars">true</item>
+		<item name="color">@color/textColorInverse</item>
+	</style>
+	
+	<style name="KmTheme.Base" parent="Theme.AppCompat.Light">
+		
+	</style>
+	
+	<style name="KmTheme.ActionBar" parent="KmTheme.Base" >
+		<!--<item name="homeAsUpIndicator">@drawable/home_as_up</item>-->
+		<item name="drawerArrowStyle">@style/DrawerArrow</item>
+		<item name="actionOverflowButtonStyle">@style/Overflow</item>
+		
+		<item name="actionBarStyle">@style/ActionBar</item>
+		<item name="actionBarSize">@dimen/actionBarSize</item><!--标题栏高度-->
+		
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item><!--状态栏颜色-->
+		<item name="colorPrimary">@color/colorPrimary</item><!--标题栏颜色-->
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="colorControlActivated">?colorAccent</item><!--控件被选中时颜色-->
+		<item name="colorControlNormal">@color/colorControlNormal</item><!--控件默认颜色-->
+		<item name="colorButtonNormal">@color/colorButtonNormal</item>
+		<item name="colorBackgroundFloating">@color/colorBackgroundFloating</item>
+		<item name="android:colorBackground">@color/colorBackground</item>
+		<item name="android:colorForeground">@color/colorForeground</item>
+		<item name="android:actionMenuTextColor">@color/textColorInverse</item>
+		<item name="android:textColorPrimaryInverse">@color/textColorInverse</item>
+		<item name="android:textColorPrimary">@color/textColorPrimary</item><!--标题栏文字颜色-->
+		<item name="android:textColorSecondary">@color/textColorPrimary</item>
+		<item name="android:textColorTertiary">@color/textColorPrimary</item>
+		<item name="android:textColor">@color/textColor</item>
+	</style>
+	
+	<style name="KmTheme.NoActionBar" parent="KmTheme.ActionBar">
+		<item name="windowNoTitle">true</item>
+		<item name="windowActionBar">false</item>
+	</style>
+	
+	<style name="KmTheme.FullScreen" parent="KmTheme.NoActionBar">
+		<item name="android:windowFullscreen">true</item>
+	</style>
+	
+	<!--透明-->
+	<style name="KmTheme.Transparent" parent="KmTheme.NoActionBar">
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsTranslucent">true</item>
+	</style>
+	
+	<!--半透明-->
+	<style name="KmTheme.Translucent" parent="KmTheme.NoActionBar">
+		<item name="android:windowTranslucentStatus">true</item>
+		<item name="android:windowTranslucentNavigation">false</item>
+	</style>
+	
+	<style name="KmTheme.Launch" parent="KmTheme.Translucent">
+		<item name="android:windowBackground">@mipmap/app_launch</item>
+	</style>
+	
+	<style name="KmTheme.Login" parent="KmTheme.Translucent">
+		<item name="colorAccent">@color/colorAccent2</item>
+	</style>
+</resources>
