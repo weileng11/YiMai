@@ -73,7 +73,7 @@ public class ActLogin extends BaseActivity
 		super.onCreate(bundle);
 		vPhone.setText(PrefUtil.getString(PrefUtil.KEY_USERNAME, null));
 		vPwd.setText(PrefUtil.getString(PrefUtil.KEY_PASSWORD, null));
-		if(false){
+		if(true){
 			vPhone.setText("13828821554");
 			vPwd.setText("111111");
 		}

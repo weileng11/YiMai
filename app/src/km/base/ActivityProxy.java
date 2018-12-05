@@ -37,16 +37,19 @@ public class ActivityProxy
 	
 	public Context getContext(){ return mActivity; }
 	
+	//对话框
 	public void dismissLoading(){
 		if(mLoadDialog!=null) mLoadDialog.dismiss();
 	}
 	
+	//显示对话框
 	public void showLoading(CharSequence msg){
 		if(mLoadDialog==null) mLoadDialog=new ProgressDialog(getActivity());
 		mLoadDialog.setMessage(!TextUtils.isEmpty(msg)? msg: "加载中...");
 		mLoadDialog.show();
 	}
 	
+	//弹窗
 	public void alert(DialogBuilder builder){
 		builder.show(getContext());
 	}

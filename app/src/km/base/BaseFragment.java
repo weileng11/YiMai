@@ -10,7 +10,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import km.api.RxFragment;
 
-/** Created by wuzhengu on 2018/10/29 0029 */
+/** Created by wuzhengu on 2018/10/29 0029 （懒加载）*/
 public class BaseFragment extends RxFragment
 {
 	ActivityProxy mProxy;

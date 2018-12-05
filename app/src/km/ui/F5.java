@@ -31,7 +31,7 @@ import km.quick.QuickHolder;
 import km.view.KmRefreshLayout;
 import km.view.KmRefreshListener;
 import km.view.PriceView;
-import vip.VipActivity;
+//import vip.VipActivity;
 
 /** Created by wuzhengu on 2018/10/29 0029 */
 public class F5 extends HomeFragment
@@ -354,7 +354,7 @@ public class F5 extends HomeFragment
 				if(item==null) return;
 				if(item.imageRes==R.mipmap.tool_a_05){
 					if(mUser!=null) if(mUser.level2>0 || "13480375487".equals(mUser.mobile)){
-						getProxy().startActivity(VipActivity.class);
+						//getProxy().startActivity(VipActivity.class);
 						return;
 					}
 					toast("请先开通会员");

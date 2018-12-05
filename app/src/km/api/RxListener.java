@@ -5,12 +5,19 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Looper;
 import android.widget.Toast;
+import km.app.App;
 import rx.Subscriber;
 
+/**
+ * @author: ${bruce}
+ * @description:
+ * @date: 2018/11/21 0021
+ * @time: 下午 2:16
+ */
 public abstract class RxListener<Model> extends Subscriber<Model>
 {
 	protected Context context(){
-		return null;
+		return App.get();
 	}
 	
 	@Override
@@ -24,6 +31,7 @@ public abstract class RxListener<Model> extends Subscriber<Model>
 		if(!netOk){
 			if(Looper.myLooper()==null) Looper.prepare();
 			Toast.makeText(ctxt, "无网络！", Toast.LENGTH_SHORT).show();
+			return;
 		}
 	}
 	
@@ -31,10 +39,18 @@ public abstract class RxListener<Model> extends Subscriber<Model>
 	public void onCompleted(){
 		
 	}
+	//public abstract void onError(ExceptionHandle.ResponeThrowable responeThrowable);
 	
 	@Override
-	public void onError(Throwable ex){
-		onNext(null, ex);
+	public void onError(Throwable e){
+		//if(e instanceof Exception){
+		//	//访问获得对应的Exception
+		//	onError(ExceptionHandle.handleException(e));
+		//}else {
+		//	//将Throwable 和 未知错误的status code返回
+		//	onError(new ExceptionHandle.ResponeThrowable(e,ExceptionHandle.ERROR.UNKNOWN));
+		//}
+		onNext(null, e);
 	}
 	
 	@Override

@@ -5,6 +5,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import rx.subjects.BehaviorSubject;
 
+/**
+ * @author: ${bruce}
+ * @description:
+ * @date: 2018/11/21 0021
+ * @time: 下午 2:16
+ */
 public class RxActivity extends AppCompatActivity implements LifeCycles.Cycle
 {
 	protected final BehaviorSubject<LifeCycles.Event> mSubject=BehaviorSubject.create();

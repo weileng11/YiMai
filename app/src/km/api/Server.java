@@ -5,13 +5,18 @@ import km.model.*;
 import retrofit2.http.*;
 import rx.Observable;
 
-/**Created by wuzhengu on 2018/10/30 0019 */
+/**
+ * @author: ${bruce}
+ * @description: 网络请求参数类
+ * @date: 2018/11/21 0021
+ * @time: 下午 2:16
+ */
 public class Server
 {
-	public static final String TEST_TOKEN="";
-	public static final String DEVICE_TYPE="android";
-	public static final String BASE_WEB="https://m.totobye.cn/";
-	public static final String BASE_URL="https://api.iudeng.cn/";
+	public static final String TEST_TOKEN="";  //token
+	public static final String DEVICE_TYPE="android"; //类型
+	public static final String BASE_WEB="https://m.totobye.cn/"; //web地址
+	public static final String BASE_URL="https://api.iudeng.cn/"; //网络请求地址
 	
 	private static Api api=null;
 	

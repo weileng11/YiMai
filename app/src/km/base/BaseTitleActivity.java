@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 import kameng.yimai.R;
 
-/**  Created by wuzhengu on 2018/10/31 0031 */
+/**  Created by wuzhengu on 2018/10/31 0031 (标题)*/
 public class BaseTitleActivity extends BaseActivity
 {
 	

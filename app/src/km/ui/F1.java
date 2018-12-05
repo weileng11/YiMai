@@ -98,6 +98,7 @@ public class F1 extends HomeFragment
 	
 	@OnClick(R.id.f1_city)
 	void click_city(final TextView v){
+		//跳转并回调
 		getProxy().startActivity(new ActivityProxy.Starter()
 		{
 			@Override
@@ -228,7 +229,7 @@ public class F1 extends HomeFragment
 					if(m.result instanceof List) list=(List)m.result;
 					else if(m.result instanceof DataList) list=((DataList)m.result).getList();
 				}
-				if(list!=null && list.size()>0){
+				if(list!=null && list.size()>0){ //10 max=5  5
 					if(max>0) for(int i=list.size()-max; i>0; i--) list.remove(list.size()-1);
 					mDatas.put(type, list);
 				}

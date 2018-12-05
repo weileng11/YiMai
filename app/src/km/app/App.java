@@ -2,6 +2,7 @@ package km.app;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.app.Application;
 import android.content.Context;
 import android.os.Build;
 import android.os.Process;
@@ -17,7 +18,7 @@ import java.util.List;
 import java.util.Locale;
 
 /** Created by wuzhengu on 2018/10/30. */
-public class App extends vip.VipApp
+public class App extends Application
 {
 	static final List<Activity> list=new LinkedList<>();
 	

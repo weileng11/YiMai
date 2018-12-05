@@ -7,6 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import rx.subjects.BehaviorSubject;
 
+/**
+ * @author: ${bruce}
+ * @description:
+ * @date: 2018/11/21 0021
+ * @time: 下午 2:16
+ */
 public class RxFragment extends Fragment implements LifeCycles.Cycle
 {
 	protected final BehaviorSubject<LifeCycles.Event> mSubject=BehaviorSubject.create();

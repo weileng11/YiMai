@@ -134,5 +134,5 @@ dependencies{
 	implementation 'com.youth.banner:banner:1.4.10'
 	
 	//compile 'com.bigkoo:ConvenientBanner:2.1.4'
-	implementation project(':app-vip')
+//	implementation project(':app-vip')
 }

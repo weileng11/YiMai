@@ -39,6 +39,7 @@ public class BaseActivity extends RxActivity
 	
 	@Override
 	protected void onCreate(@Nullable Bundle bundle){
+		//添加act
 		App.set(this, true);
 		super.onCreate(bundle);
 		int layout=getLayoutId();

@@ -30,7 +30,12 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-/** Created by wuzhengu on 2018/10/30 0019 */
+/**
+ * @author: ${bruce}
+ * @description:
+ * @date: 2018/11/21 0021
+ * @time: 下午 2:16
+ */
 public class Servers
 {
 	public static Retrofit getRetrofit(String baseUrl){
